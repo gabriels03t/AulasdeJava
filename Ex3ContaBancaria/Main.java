@@ -1,3 +1,5 @@
+package Ex3ContaBancaria;
+
 public class Main {
     public static void main(String[] args) {
         ContaBancaria conta1 = new ContaBancaria(123456, "João", 1000.0);

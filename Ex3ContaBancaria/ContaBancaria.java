@@ -1,3 +1,6 @@
+package Ex3ContaBancaria;
+
+
 public class ContaBancaria {
     private int numeroConta;
     private String nomeTitular;

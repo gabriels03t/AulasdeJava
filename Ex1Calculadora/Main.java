@@ -1,4 +1,4 @@
-package Calculadora;
+package Ex1Calculadora;
 
 import java.util.Scanner;
 

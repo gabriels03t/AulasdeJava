@@ -1,4 +1,4 @@
-package Biblioteca;
+package Ex2Biblioteca;
 
 public class Livro {
     private String titulo;

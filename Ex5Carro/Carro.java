@@ -1,4 +1,4 @@
-public class Carro {
+class Carro {
     private String marca, modelo, placa;
     private int ano, velocidadeAtual;
 
@@ -7,27 +7,29 @@ public class Carro {
         this.modelo = modelo;
         this.ano = ano;
         this.placa = placa;
+        this.velocidadeAtual = 0;
     }
 
-    public void acelerar() { velocidadeAtual += 10; }
-
-    public void frear() {
-        velocidadeAtual = Math.max(0, velocidadeAtual - 10);
+    // Método para acelerar o carro
+    public void acelerar(int aumentoVelocidade) {
+        this.velocidadeAtual += aumentoVelocidade;
     }
 
+    // Método para frear o carro
+    public void frear(int diminuicaoVelocidade) {
+        if (this.velocidadeAtual - diminuicaoVelocidade >= 0) {
+            this.velocidadeAtual -= diminuicaoVelocidade;
+        } else {
+            this.velocidadeAtual = 0;
+        }
+    }
+
+    // Método para exibir informações do carro
     public void exibirInformacoes() {
-        System.out.println("Marca: " + marca + "\nModelo: " + modelo + "\nAno: " + ano + "\nPlaca: " + placa + "\nVelocidade Atual: " + velocidadeAtual);
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Ano: " + ano);
+        System.out.println("Placa: " + placa);
+        System.out.println("Velocidade Atual: " + velocidadeAtual);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/*Em uma tranquila cidade conhecida por sua paixão por automobilismo, um grupo de entusiastas decarros clássicos decide organizar um evento para exibir seus veículos. Para tornar o evento maisinteressante, eles planejam criar um sistema que permita aos participantes registrarem seus carros,incluindo informações detalhadas e a capacidade de controlar algumas funcionalidades dos carros, comoa velocidade.Motivado por esse evento de carros clássicos, o desafio é desenvolver uma classe `Carro` em Java,aplicando os princípios da orientação a objetos. Este sistema deve permitir aos usuários criarem objetos`Carro` com informações como marca, modelo, ano e velocidade atual. Além disso, os carros devem termétodos que permitam acelerar e frear, ajustando a velocidade atual de acordo com a ação realizada.Dica:“Desenvolva a classe ‘Carro’ com atributos privados para ‘marca’, ‘modelo’, ‘ano’, ‘placa’ e ‘velocidadeAtual’.Implemente um construtor para inicializar os atributos do carro quando um novo objeto é criado. Adicione métodospúblicos para `acelerar()`, que aumenta a velocidade do carro, e `frear()`, que diminui a velocidade. Não esqueça deincluir um método para exibir as informações do carro, refletindo a importância da encapsulação e da interaçãoentre os objetos em um programa orientado a objetos.*/

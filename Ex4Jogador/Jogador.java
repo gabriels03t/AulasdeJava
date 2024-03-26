@@ -1,33 +1,31 @@
 package Ex4Jogador;
 
-public class Jogador {
+class Jogador {
     private String nome;
     private int pontuacao;
     private int nivel;
 
-    public Jogador(String nome) {
+    public Jogador(String nome, int pontuacao, int nivel) {
         this.nome = nome;
-        this.pontuacao = 0;
-        this.nivel = 1;
+        this.pontuacao = pontuacao;
+        this.nivel = nivel;
     }
 
     public void aumentarPontuacao(int pontos) {
-        pontuacao += pontos;
+        this.pontuacao += pontos;
     }
 
     public void subirNivel() {
-        nivel++;
+        this.nivel++;
     }
 
     public void exibirInformacoes() {
-        System.out.println("Nome do jogador: " + nome);
+        System.out.println("\nInformações do jogador:");
+        System.out.println("Nome: " + nome);
         System.out.println("Pontuação: " + pontuacao);
         System.out.println("Nível: " + nivel);
     }
 }
-
-
-
 
 
 
